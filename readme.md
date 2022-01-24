@@ -1,34 +1,53 @@
-# What is RudderStack?
+<p align="center">
+  <a href="https://rudderstack.com/">
+    <img src="https://user-images.githubusercontent.com/59817155/121357083-1c571300-c94f-11eb-8cc7-ce6df13855c9.png">
+  </a>
+</p>
 
-[RudderStack](https://rudderstack.com/) is a **customer data pipeline** tool for collecting, routing and processing data from your websites, apps, cloud tools, and data warehouse.
+<p align="center"><b>The Customer Data Platform for Developers</b></p>
 
-More information on RudderStack can be found [here](https://github.com/rudderlabs/rudder-server).
+<p align="center">
+  <b>
+    <a href="https://rudderstack.com">Website</a>
+    ·
+    <a href="https://rudderstack.com/docs/stream-sources/rudderstack-sdk-integration-guides/rudderstack-node-sdk/">Documentation</a>
+    ·
+    <a href="https://rudderstack.com/join-rudderstack-slack-community">Community Slack</a>
+  </b>
+</p>
+
+---
 
 # RudderStack Node.js SDK
 
-RudderStack’s Node.js SDK allows you to track your customer event data from your Node.js code. Once enabled, the event requests hit the RudderStack servers. RudderStack then routes the events to the specified destination platforms as configured by you.
+The RudderStack Node.js SDK lets you track your customer event data from your Node.js applications and send it to your specified destinations via RudderStack.
 
-## Installation
+Refer to the [**documentation**](https://www.rudderstack.com/docs/stream-sources/rudderstack-sdk-integration-guides/rudderstack-node-sdk/) for more details.
+
+## Installing the SDK
+
+You can install the Node.js SDK via **npm** by running the following command:
 
 ```bash
 $ npm install @rudderstack/rudder-sdk-node
 ```
 
-## Usage
+## Using the SDK
 
-```js
+Run the following snippet to create a global RudderStack client object and use it for the subsequent event calls.
+
+```javascript
 const Analytics = require("@rudderstack/rudder-sdk-node");
 
 // we need the batch endpoint of the Rudder server you are running
-const client = new Analytics("write key", "<data-plane-uri>/v1/batch");
-
-client.track({
-  event: "event name",
-  userId: "user id"
-});
+const client = new Analytics(WRITE_KEY, DATA_PLANE_URL/v1/batch");
 ```
 
-## Initialization for persistence
+## Supported calls
+
+Refer to the [**SDK documentation**](https://www.rudderstack.com/docs/stream-sources/rudderstack-sdk-integration-guides/rudderstack-node-sdk/) for more information on the supported calls.
+
+## Initializing the SDK for data persistence
 
 ```
 const client = new Analytics(
@@ -104,9 +123,9 @@ https://gitter.im/OptimalBits/bull/archives/2018/04/17
 
 ## Documentation
 
-Documentation is available [here](https://docs.rudderstack.com/rudderstack-sdk-integration-guides/rudderstack-node-sdk).
+Documentation is available [here](https://www.rudderstack.com/docs/stream-sources/rudderstack-sdk-integration-guides/rudderstack-node-sdk/).
 
-## Contact Us
+## Contact us
 
-If you come across any issues while configuring or using the RudderStack Node.js SDK, please feel free to [contact us](https://rudderstack.com/contact/) or start a conversation on our [Slack](https://resources.rudderstack.com/join-rudderstack-slack) channel. We will be happy to help you.
+If you come across any issues while configuring or using the RudderStack Node.js SDK, you can [**contact us**](https://rudderstack.com/contact/) or start a conversation in our [**Slack**](https://resources.rudderstack.com/join-rudderstack-slack) community.
 
